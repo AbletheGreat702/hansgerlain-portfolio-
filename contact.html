@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Woodworking Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">HG Woodworks</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="drawings.html">Drawings</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>Get In Touch</h2>
+      <p class="subtitle">Interested in working together? Let's discuss your project.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 3rem 0;">
+
+        <div>
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p style="margin-top: 1rem;"><strong>Email:</strong> hans.gerlain@example.com</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Location:</strong> Your City, State</p>
+            <p><strong>Availability:</strong> Monday - Friday, 8am - 5pm</p>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <h3>Services</h3>
+            <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Custom Cabinetry</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Built-ins & Millwork</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">Shop Drawings & CAD</li>
+              <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">CNC Programming</li>
+              <li style="padding: 0.5rem 0;">Furniture Design & Build</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <form class="contact-form" action="mailto:hans.gerlain@example.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+              <label for="project-type">Project Type</label>
+              <input type="text" id="project-type" name="project-type" placeholder="e.g., Custom Cabinets, Built-ins">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Hans Gerlain Woodworks. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
