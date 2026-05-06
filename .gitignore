@@ -1,0 +1,23 @@
+# Windows junction points
+My Music/
+My Pictures/
+My Videos/
+
+# Common excludes
+.claude/
+.vscode/
+*.log
+*.pyc
+__pycache__/
+venv/
+env/
+.venv/
+
+# Build artifacts
+build/
+*.egg-info/
+dist/
+
+# OS files
+desktop.ini
+Thumbs.db
