@@ -27,94 +27,109 @@
       <h2>Shop Drawings & CAD Work</h2>
       <p class="subtitle">Professional shop drawings and technical documentation</p>
 
-      <div class="pdf-container">
-        <h3>Cabinet with Floating Shelves</h3>
-        <p class="pdf-meta">Project #5 | Cabinetry & Millwork</p>
-        <embed src="pdfs/Cabinet with Floating Shelves-5.pdf" type="application/pdf" class="pdf-embed">
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterDrawings('all', this)">All</button>
+        <button class="filter-btn" onclick="filterDrawings('cabinets', this)">Cabinets</button>
+        <button class="filter-btn" onclick="filterDrawings('custom', this)">Custom</button>
+        <button class="filter-btn" onclick="filterDrawings('samples', this)">Samples</button>
       </div>
 
-      <div class="pdf-container">
-        <h3>Custom Cabinet #2</h3>
-        <p class="pdf-meta">Project #2 | Cabinetry</p>
-        <embed src="pdfs/Cabinet #2-2.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+      <div id="drawings-list">
+        <div class="pdf-container" data-category="cabinets">
+          <h3>Cabinet with Floating Shelves</h3>
+          <p class="pdf-meta">Project #5 | Cabinetry & Millwork</p>
+          <embed src="pdfs/Cabinet with Floating Shelves-5.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Custom Cabinet #3</h3>
-        <p class="pdf-meta">Project #3 | Cabinetry</p>
-        <embed src="pdfs/Cabinet-3.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="cabinets">
+          <h3>Custom Cabinet #2</h3>
+          <p class="pdf-meta">Project #2 | Cabinetry</p>
+          <embed src="pdfs/Cabinet #2-2.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Jig Holder Case - CNC Drawings</h3>
-        <p class="pdf-meta">CNC Machining | Shop Drawings</p>
-        <embed src="pdfs/Jigg Holder Case Drawings CNC SHOP .pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="cabinets">
+          <h3>Custom Cabinet #3</h3>
+          <p class="pdf-meta">Project #3 | Cabinetry</p>
+          <embed src="pdfs/Cabinet-3.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Jig Holder Case - Final Drawings</h3>
-        <p class="pdf-meta">Shop Drawings | Final Version</p>
-        <embed src="pdfs/Jigg Holder Case Shop Drawings Final .pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="custom">
+          <h3>Jig Holder Case - CNC Drawings</h3>
+          <p class="pdf-meta">CNC Machining | Shop Drawings</p>
+          <embed src="pdfs/Jigg Holder Case Drawings CNC SHOP .pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #2</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 2 (Hans Gerlain).pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="custom">
+          <h3>Jig Holder Case - Final Drawings</h3>
+          <p class="pdf-meta">Shop Drawings | Final Version</p>
+          <embed src="pdfs/Jigg Holder Case Shop Drawings Final .pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #4</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 4.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #1</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 1.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #5</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 5.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #2</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 2.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #6</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 6.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #4</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 4.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #7</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 7.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #5</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 5.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #8</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 8.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #6</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 6.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #11</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 11.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #7</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 7.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #12</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 12.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #8</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 8.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #13</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 13.pdf" type="application/pdf" class="pdf-embed">
-      </div>
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #11</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 11.pdf" type="application/pdf" class="pdf-embed">
+        </div>
 
-      <div class="pdf-container">
-        <h3>Sample Work #14</h3>
-        <p class="pdf-meta">Project Sample</p>
-        <embed src="pdfs/Sample of Work 14.pdf" type="application/pdf" class="pdf-embed">
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #12</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 12.pdf" type="application/pdf" class="pdf-embed">
+        </div>
+
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #13</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 13.pdf" type="application/pdf" class="pdf-embed">
+        </div>
+
+        <div class="pdf-container" data-category="samples">
+          <h3>Sample Work #14</h3>
+          <p class="pdf-meta">Project Sample</p>
+          <embed src="pdfs/Sample of Work 14.pdf" type="application/pdf" class="pdf-embed">
+        </div>
       </div>
 
     </section>
@@ -125,6 +140,24 @@
       <p>&copy; 2026 Hans Gerlain Woodworks. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function filterDrawings(category, btn) {
+      const containers = document.querySelectorAll('#drawings-list .pdf-container');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      containers.forEach(container => {
+        if (category === 'all' || container.dataset.category === category) {
+          container.style.display = 'block';
+        } else {
+          container.style.display = 'none';
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
