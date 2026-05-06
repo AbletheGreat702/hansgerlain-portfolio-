@@ -11,12 +11,14 @@ export class StateManager {
     try {
       if (fs.existsSync(this.stateFile)) {
         const data = fs.readFileSync(this.stateFile, 'utf8');
-        return JSON.parse(data);
+        this.state = JSON.parse(data);
+        return this.state;
       }
     } catch (e) {
       console.error('Error loading state:', e.message);
     }
-    return { positions: {}, totalPnL: 0, drawdown: 0 };
+    this.state = { positions: {}, totalPnL: 0, drawdown: 0 };
+    return this.state;
   }
 
   save() {
