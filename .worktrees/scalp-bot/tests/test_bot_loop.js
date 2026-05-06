@@ -1,6 +1,6 @@
 import { describe, it, mock } from 'node:test';
 import assert from 'node:assert';
-import { ScalpBot } from '../src/index.js';
+import ScalpBot from '../src/index.js';
 
 it('should poll each symbol in round-robin', async () => {
   const bot = new ScalpBot({

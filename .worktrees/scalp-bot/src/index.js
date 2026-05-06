@@ -15,7 +15,7 @@ const TIME_STOP_MS = parseInt(process.env.TIME_STOP_MS || '1800000');
 const POLL_INTERVAL_MS = parseInt(process.env.POLL_INTERVAL_MS || '5000');
 const CIRCUIT_BREAKER = parseFloat(process.env.CIRCUIT_BREAKER || '500');
 
-export class ScalpBot {
+  export default class ScalpBot {
   constructor({ symbols, pollIntervalMs }) {
     this.symbols = symbols;
     this.pollIntervalMs = pollIntervalMs;
@@ -131,10 +131,12 @@ export class ScalpBot {
 
     while (this.running) {
       const now = new Date();
-      const hour = now.getHours();
-      const minute = now.getMinutes();
-      const day = now.getDay();
-
+      const nowET = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
+      const hour = nowET.getHours();
+      const minute = nowET.getMinutes();
+      const day = nowET.getDay();
+      
+      // Only run during market hours (9:30 AM - 4:00 PM ET, Mon-Fri)
       const marketOpen = day >= 1 && day <= 5 && (hour > 9 || (hour === 9 && minute >= 30)) && hour < 16;
 
       if (marketOpen) {
@@ -153,7 +155,7 @@ export class ScalpBot {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (new URL(process.argv[1], 'file://').href === import.meta.url) {
   const bot = new ScalpBot({ symbols: SYMBOLS, pollIntervalMs: POLL_INTERVAL_MS });
   bot.start().catch(console.error);
 
