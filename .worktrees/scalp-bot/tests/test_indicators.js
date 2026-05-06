@@ -18,13 +18,13 @@ it('should return last EMA value from array of prices', () => {
 });
 
 it('should detect rising EMA slope', () => {
-  const prices = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  const prices = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
   const rising = calculateEMASlope(prices, 9);
   assert.strictEqual(rising, true);
 });
 
 it('should detect falling EMA slope', () => {
-  const prices = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10];
+  const prices = [23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10];
   const rising = calculateEMASlope(prices, 9);
   assert.strictEqual(rising, false);
 });

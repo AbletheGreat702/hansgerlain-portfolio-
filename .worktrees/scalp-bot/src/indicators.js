@@ -13,7 +13,7 @@ export function calculateEMA(prices, period) {
   return ema;
 }
 
-export function calculateEMASlope(prices, period, lookbackBars = 2) {
+export function calculateEMASlope(prices, period, lookbackBars = 5) {
   if (prices.length < period + lookbackBars) {
     return false; // Not enough data
   }
