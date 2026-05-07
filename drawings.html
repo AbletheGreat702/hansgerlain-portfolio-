@@ -115,23 +115,5 @@
     </div>
   </footer>
 
-  <script>
-    function filterDrawings(category, btn) {
-      const containers = document.querySelectorAll('#drawings-list .pdf-container');
-      const buttons = document.querySelectorAll('.filter-btn');
-
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      containers.forEach(container => {
-        if (category === 'all' || container.dataset.category === category) {
-          container.style.display = 'block';
-        } else {
-          container.style.display = 'none';
-        }
-      });
-    }
-  </script>
-
 </body>
 </html>

@@ -50,7 +50,7 @@
         </div>
 
         <div>
-          <form class="contact-form" action="mailto:handolo7018@gmail.com" method="post" enctype="text/plain">
+          <form class="contact-form" id="contact-form">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required>
@@ -89,6 +89,23 @@
       <p>&copy; 2026 Hans Gerlain. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(this);
+      const name = (data.get('name') || '').trim();
+      const subject = encodeURIComponent('Portfolio inquiry' + (name ? ' from ' + name : ''));
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + (data.get('email') || '').trim() + '\n' +
+        'Phone: ' + (data.get('phone') || '').trim() + '\n' +
+        'Project Type: ' + (data.get('project-type') || '').trim() + '\n\n' +
+        'Message:\n' + (data.get('message') || '').trim()
+      );
+      window.location.href = 'mailto:handolo7018@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
 
 </body>
 </html>
