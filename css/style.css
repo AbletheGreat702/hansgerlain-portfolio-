@@ -396,6 +396,9 @@ section {
 /* FTD card spans the full grid with a 2x2 media block */
 .ftd-card {
   grid-column: 1 / -1;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .ftd-media {
