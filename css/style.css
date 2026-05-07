@@ -392,3 +392,44 @@ section {
 .featured-projects {
   margin: 3rem 0;
 }
+
+/* FTD card spans the full grid with a 2x2 media block */
+.ftd-card {
+  grid-column: 1 / -1;
+}
+
+.ftd-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background-color: var(--border);
+  border-bottom: 2px solid var(--accent);
+}
+
+.ftd-media img {
+  width: 100%;
+  display: block;
+}
+
+.ftd-photo {
+  height: 340px;
+  object-fit: cover;
+}
+
+.ftd-tech {
+  height: 280px;
+  object-fit: contain;
+  background-color: var(--bg-secondary);
+}
+
+@media (max-width: 768px) {
+  .ftd-media {
+    grid-template-columns: 1fr;
+  }
+  .ftd-photo {
+    height: 240px;
+  }
+  .ftd-tech {
+    height: 220px;
+  }
+}
